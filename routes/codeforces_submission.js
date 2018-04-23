@@ -66,11 +66,8 @@ var submissionFunc = function(username , callback) {
             for(var i = 0; i < rows.length ; ++i) {
                 var current = rows[i];
                 var q_name = $(current).children("td").eq(3).text().trim(); //960B Riu is cute
-                var code = q_name.split(' ' , 1);   //960B
-                var type = code[0][code[0].length - 1];     //B
+                var type = q_name.split(' ' , 1); 
                 var verdict = $(current).children("td").eq(-3).text().trim();   //Accepted
-                var code_first = code[0].slice(0,code[0].length - 1);
-                var question_link = "http://codeforces.com/problemset/problem/" + code_first + "/" + type;
                 if(verdict.charAt(0)=='A') {
                     accepted++;
                     solved.push(q_name);
@@ -95,11 +92,8 @@ var submissionFunc = function(username , callback) {
                         key : q_name,
                         value : question_link
                     });*/
-                    if(solved.indexOf(q_name) == -1 && q_name!="" && q_name!="") {
-                        todo.push({
-                            key : q_name,
-                            value : question_link
-                        });
+                    if(solved.indexOf(q_name) == -1 && q_name!="") {
+                        todo.push(q_name);
                     }                        
                     if(verdict.charAt(0)=='W'){
                         wa++;
@@ -135,6 +129,8 @@ var submissionFunc = function(username , callback) {
         D_cnt = D.length;
         E_cnt = E.length;
         F_cnt = F.length;
+        G_cnt = G.length;
+        todo_cnt = todo.length;
         submission_data = {
             Problems_solved,            
             accepted,
