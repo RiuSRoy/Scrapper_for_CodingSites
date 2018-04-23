@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>Sphere Online Judge (SPOJ)  - User riu_20</title>
+	  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:image" content="//stx1.spoj.com/gfx/spoj-fb.jpg"/>
+	<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+	<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		<link href="//stx1.spoj.com/themes/cal-heatmap.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src='//stx1.spoj.com/js/d3.v3.min.js'></script>
+	<script type="text/javascript" src='//stx1.spoj.com/js/cal-heatmap.min.js'></script>
+	<script type="text/javascript" src="//www.google.com/jsapi"></script>
+		
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>	
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a> 
+								<a href="/forgot"><i class="fa fa-question-circle"></i> forgot</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li >
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<div class="submenu">
+	<ol class="">
+			<li></li>
+		</ol>
+	
+	<ol class="navbar-right">
+			<li><a href="/status/riu_20/">History of submissions</a></li>
+		<li>(<a href="/status/riu_20/signedlist/">plaintext version</a>)</li>
+	</ol>
+	
+</div>
+
+<div>
+<div class="row">
+	<div class="col-md-3" id="user-profile-left">
+		<img  class="img-thumbnail" width="100%" style="max-width: 262px;" src="http://www.gravatar.com/avatar/aab3d2e981dffdd69a9062c913c2c453?s=290&20180402" class="avatar small-left-margin">
+		<h3>Aishwariya Singha Roy</h3>		<h4>@riu_20</h4>
+		<p><i class="fa fa-map-marker"></i> India, Guwahati</p>		<p><i class="fa fa-clock-o"></i> Joined Dec 2015</p>
+		<p><i class="fa fa-trophy"></i> World Rank: #2008 (16.3 points)</p>
+		<p><i class="fa fa-building-o "></i> Institution: NIT Silchar</p>		<p>A proud Indian!</p>		
+		
+		
+			</div>
+	<div class="col-md-9">
+	
+		<center>
+		<div class="c728x90"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="4026799034"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</center>
+	
+						<div class="row row-centered">
+			<div class="col-md-12">
+				<h3>Activity over the last year</h3>
+				<div class="top-4 col-centered" id="cal-heatmap"></div>
+
+				<h3 class="top-4">Effectiveness</h3>
+				<div class="row">
+					<div class="col-md-6 text-center valign-center">
+						<dl class="dl-horizontal profile-info-data profile-info-data-stats">
+							<dt><span class="fa fa-check fa-fw"></span>&nbsp;Problems solved</dt>
+								<dd>212</dd>
+							<dt><span class="fa fa-send fa-fw"></span>&nbsp;Solutions submitted</dt>
+								<dd>411</dd>
+						</dl>
+					</div>
+					<div class="col-md-6">
+						<div id="chart_div"></div>
+					</div>
+				</div>
+				
+				<script type="text/javascript">
+					function BackTime(date) {
+						var y = date.getFullYear(),
+							m = date.getMonth();
+						return new Date(y-1, m+1, 15);
+					}
+					
+					function drawChart() {
+
+						var data = new google.visualization.DataTable();
+							data.addColumn('string', '?');
+							data.addColumn('number', 'ACC');
+							data.addColumn('number', 'WA');
+							data.addColumn('number', 'TLE');
+							data.addColumn('number', 'RE');
+							data.addColumn('number', 'CE');
+							data.addRows([
+							
+							['Submissions', 231, 87, 61, 11, 20]
+							
+						]);
+	
+						var options = {
+							isStacked: 'percent',
+							pieSliceText: 'label',
+							colors: ['#348d34', '#ec971f', '#ec971f', '#c9302c', '#c9302c'],
+							//colors:['#00C030','#F09A24','#F09A24','#F09A24','#F09A24'],
+							'width':400,
+							'height':100,
+							chartArea:{left:10,top:10,width:'90%',height:'90%'},
+							fontName: '@font-family-base',
+							legend: {
+								position: 'top',
+								textStyle: {
+									fontName: '@font-family-base',
+									bold: true
+							}},
+							hAxis: {
+					            minValue: 0,
+					            ticks: [0, .25, .5, .75, 1]
+					          }
+						};
+	
+						var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+						chart.draw(data, options);
+					}
+					
+					$(document).ready(function(){
+					
+						var cal = new CalHeatMap();
+						cal.init({
+							domain: "month",
+							subDomain: "day",
+							domainGutter: 3,
+							tooltip: true,
+							start: BackTime(new Date()),
+							maxDate: new Date(),
+							colLimit: 4,
+							legend: [10, 20, 30, 40],
+							itemName: ["submission", "submissions"],
+							data: '/calendar/?ajax=1&uid=383169&start={{d:start}}&stop={{d:end}}'
+						});
+					});
+					
+					google.load('visualization', '1.0', {'packages':['corechart']});
+					google.setOnLoadCallback(drawChart);
+				</script>
+				
+				
+						
+			</div>
+		</div>
+
+		<h3 class="top-4 text-center">Problems</h3>
+		<div class="row row-centered" id="user-profile-tables">
+			<div class="col-md-12">
+				<h4>List of solved classical problems:</h4>
+				<table class="table table-condensed">
+								<tr>
+				<td align="left" width="14%"><a href="/status/AAC2,riu_20/">AAC2</a></td>
+				<td align="left" width="14%"><a href="/status/ARITH2,riu_20/">ARITH2</a></td>
+				<td align="left" width="14%"><a href="/status/CRAN02,riu_20/">CRAN02</a></td>
+				<td align="left" width="14%"><a href="/status/GCD2,riu_20/">GCD2</a></td>
+				<td align="left" width="14%"><a href="/status/KQUERY,riu_20/">KQUERY</a></td>
+				<td align="left" width="14%"><a href="/status/PEBBLE,riu_20/">PEBBLE</a></td>
+				<td align="left" width="14%"><a href="/status/SNGPG,riu_20/">SNGPG</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ABA12C,riu_20/">ABA12C</a></td>
+				<td align="left" width="14%"><a href="/status/ARMY,riu_20/">ARMY</a></td>
+				<td align="left" width="14%"><a href="/status/CRZYSMKR,riu_20/">CRZYSMKR</a></td>
+				<td align="left" width="14%"><a href="/status/GCDEX,riu_20/">GCDEX</a></td>
+				<td align="left" width="14%"><a href="/status/KURUK14,riu_20/">KURUK14</a></td>
+				<td align="left" width="14%"><a href="/status/PERMUT2,riu_20/">PERMUT2</a></td>
+				<td align="left" width="14%"><a href="/status/SPCQ,riu_20/">SPCQ</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ABA12E,riu_20/">ABA12E</a></td>
+				<td align="left" width="14%"><a href="/status/AROPE,riu_20/">AROPE</a></td>
+				<td align="left" width="14%"><a href="/status/CSHOWB,riu_20/">CSHOWB</a></td>
+				<td align="left" width="14%"><a href="/status/GEOPROB,riu_20/">GEOPROB</a></td>
+				<td align="left" width="14%"><a href="/status/LASTDIG,riu_20/">LASTDIG</a></td>
+				<td align="left" width="14%"><a href="/status/PFDEP,riu_20/">PFDEP</a></td>
+				<td align="left" width="14%"><a href="/status/SQRROOT,riu_20/">SQRROOT</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ABCDEF,riu_20/">ABCDEF</a></td>
+				<td align="left" width="14%"><a href="/status/ARRAYSUB,riu_20/">ARRAYSUB</a></td>
+				<td align="left" width="14%"><a href="/status/CSTREET,riu_20/">CSTREET</a></td>
+				<td align="left" width="14%"><a href="/status/GERGOVIA,riu_20/">GERGOVIA</a></td>
+				<td align="left" width="14%"><a href="/status/LASTDIG2,riu_20/">LASTDIG2</a></td>
+				<td align="left" width="14%"><a href="/status/PHONELST,riu_20/">PHONELST</a></td>
+				<td align="left" width="14%"><a href="/status/STAMPS,riu_20/">STAMPS</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ABSP1,riu_20/">ABSP1</a></td>
+				<td align="left" width="14%"><a href="/status/ASCDFIB,riu_20/">ASCDFIB</a></td>
+				<td align="left" width="14%"><a href="/status/CUTCAKE,riu_20/">CUTCAKE</a></td>
+				<td align="left" width="14%"><a href="/status/GGD,riu_20/">GGD</a></td>
+				<td align="left" width="14%"><a href="/status/LCMSUM,riu_20/">LCMSUM</a></td>
+				<td align="left" width="14%"><a href="/status/PIHU1,riu_20/">PIHU1</a></td>
+				<td align="left" width="14%"><a href="/status/STPAR,riu_20/">STPAR</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ABSYS,riu_20/">ABSYS</a></td>
+				<td align="left" width="14%"><a href="/status/ATOMS,riu_20/">ATOMS</a></td>
+				<td align="left" width="14%"><a href="/status/DANGER,riu_20/">DANGER</a></td>
+				<td align="left" width="14%"><a href="/status/GIRLSNBS,riu_20/">GIRLSNBS</a></td>
+				<td align="left" width="14%"><a href="/status/LOCKER,riu_20/">LOCKER</a></td>
+				<td align="left" width="14%"><a href="/status/PRIME1,riu_20/">PRIME1</a></td>
+				<td align="left" width="14%"><a href="/status/SUBSEQ,riu_20/">SUBSEQ</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ACODE,riu_20/">ACODE</a></td>
+				<td align="left" width="14%"><a href="/status/BABTWR,riu_20/">BABTWR</a></td>
+				<td align="left" width="14%"><a href="/status/DCRYPT,riu_20/">DCRYPT</a></td>
+				<td align="left" width="14%"><a href="/status/GLJIVE,riu_20/">GLJIVE</a></td>
+				<td align="left" width="14%"><a href="/status/MAIN72,riu_20/">MAIN72</a></td>
+				<td align="left" width="14%"><a href="/status/PROFF,riu_20/">PROFF</a></td>
+				<td align="left" width="14%"><a href="/status/SUBSUMS,riu_20/">SUBSUMS</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ACPC10A,riu_20/">ACPC10A</a></td>
+				<td align="left" width="14%"><a href="/status/BALLSUM,riu_20/">BALLSUM</a></td>
+				<td align="left" width="14%"><a href="/status/DICT,riu_20/">DICT</a></td>
+				<td align="left" width="14%"><a href="/status/GOO,riu_20/">GOO</a></td>
+				<td align="left" width="14%"><a href="/status/MAKETREE,riu_20/">MAKETREE</a></td>
+				<td align="left" width="14%"><a href="/status/PRUBALL,riu_20/">PRUBALL</a></td>
+				<td align="left" width="14%"><a href="/status/SUMFOUR,riu_20/">SUMFOUR</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ACPC10D,riu_20/">ACPC10D</a></td>
+				<td align="left" width="14%"><a href="/status/BAT3,riu_20/">BAT3</a></td>
+				<td align="left" width="14%"><a href="/status/DIEHARD,riu_20/">DIEHARD</a></td>
+				<td align="left" width="14%"><a href="/status/GOODB,riu_20/">GOODB</a></td>
+				<td align="left" width="14%"><a href="/status/MATHLOVE,riu_20/">MATHLOVE</a></td>
+				<td align="left" width="14%"><a href="/status/PT07Y,riu_20/">PT07Y</a></td>
+				<td align="left" width="14%"><a href="/status/SUMMATION,riu_20/">SUMMATION</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ADAINDEX,riu_20/">ADAINDEX</a></td>
+				<td align="left" width="14%"><a href="/status/BITDIFF,riu_20/">BITDIFF</a></td>
+				<td align="left" width="14%"><a href="/status/DIVFACT,riu_20/">DIVFACT</a></td>
+				<td align="left" width="14%"><a href="/status/GSHOP,riu_20/">GSHOP</a></td>
+				<td align="left" width="14%"><a href="/status/MAXLN,riu_20/">MAXLN</a></td>
+				<td align="left" width="14%"><a href="/status/PT07Z,riu_20/">PT07Z</a></td>
+				<td align="left" width="14%"><a href="/status/TAP2015H,riu_20/">TAP2015H</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ADARAIN,riu_20/">ADARAIN</a></td>
+				<td align="left" width="14%"><a href="/status/BITPLAY,riu_20/">BITPLAY</a></td>
+				<td align="left" width="14%"><a href="/status/DOL,riu_20/">DOL</a></td>
+				<td align="left" width="14%"><a href="/status/GSS1,riu_20/">GSS1</a></td>
+				<td align="left" width="14%"><a href="/status/MAXXOR,riu_20/">MAXXOR</a></td>
+				<td align="left" width="14%"><a href="/status/PTIME,riu_20/">PTIME</a></td>
+				<td align="left" width="14%"><a href="/status/TDKPRIME,riu_20/">TDKPRIME</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ADASEQEN,riu_20/">ADASEQEN</a></td>
+				<td align="left" width="14%"><a href="/status/BLINNET,riu_20/">BLINNET</a></td>
+				<td align="left" width="14%"><a href="/status/DOTAA,riu_20/">DOTAA</a></td>
+				<td align="left" width="14%"><a href="/status/GSS3,riu_20/">GSS3</a></td>
+				<td align="left" width="14%"><a href="/status/MISERMAN,riu_20/">MISERMAN</a></td>
+				<td align="left" width="14%"><a href="/status/QN01,riu_20/">QN01</a></td>
+				<td align="left" width="14%"><a href="/status/TDPRIMES,riu_20/">TDPRIMES</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ADDREV,riu_20/">ADDREV</a></td>
+				<td align="left" width="14%"><a href="/status/BTCODE_D,riu_20/">BTCODE_D</a></td>
+				<td align="left" width="14%"><a href="/status/DQUERY,riu_20/">DQUERY</a></td>
+				<td align="left" width="14%"><a href="/status/GSS4,riu_20/">GSS4</a></td>
+				<td align="left" width="14%"><a href="/status/MMMGAME,riu_20/">MMMGAME</a></td>
+				<td align="left" width="14%"><a href="/status/QUADAREA,riu_20/">QUADAREA</a></td>
+				<td align="left" width="14%"><a href="/status/TEST,riu_20/">TEST</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ADFRUITS,riu_20/">ADFRUITS</a></td>
+				<td align="left" width="14%"><a href="/status/BUBBLESORT,riu_20/">BUBBLESORT</a></td>
+				<td align="left" width="14%"><a href="/status/DSUBSEQ,riu_20/">DSUBSEQ</a></td>
+				<td align="left" width="14%"><a href="/status/GUANGGUN,riu_20/">GUANGGUN</a></td>
+				<td align="left" width="14%"><a href="/status/MOHIB,riu_20/">MOHIB</a></td>
+				<td align="left" width="14%"><a href="/status/RENT,riu_20/">RENT</a></td>
+				<td align="left" width="14%"><a href="/status/TFRIENDS,riu_20/">TFRIENDS</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AE00,riu_20/">AE00</a></td>
+				<td align="left" width="14%"><a href="/status/BWIDOW,riu_20/">BWIDOW</a></td>
+				<td align="left" width="14%"><a href="/status/EC_CONB,riu_20/">EC_CONB</a></td>
+				<td align="left" width="14%"><a href="/status/HACKRNDM,riu_20/">HACKRNDM</a></td>
+				<td align="left" width="14%"><a href="/status/MUL,riu_20/">MUL</a></td>
+				<td align="left" width="14%"><a href="/status/RKS,riu_20/">RKS</a></td>
+				<td align="left" width="14%"><a href="/status/TRIKA,riu_20/">TRIKA</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AGGRCOW,riu_20/">AGGRCOW</a></td>
+				<td align="left" width="14%"><a href="/status/BYTESE2,riu_20/">BYTESE2</a></td>
+				<td align="left" width="14%"><a href="/status/EDIST,riu_20/">EDIST</a></td>
+				<td align="left" width="14%"><a href="/status/HANGOVER,riu_20/">HANGOVER</a></td>
+				<td align="left" width="14%"><a href="/status/NAJPF,riu_20/">NAJPF</a></td>
+				<td align="left" width="14%"><a href="/status/RLE,riu_20/">RLE</a></td>
+				<td align="left" width="14%"><a href="/status/TSHOW1,riu_20/">TSHOW1</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AIBOHP,riu_20/">AIBOHP</a></td>
+				<td align="left" width="14%"><a href="/status/BYTESM2,riu_20/">BYTESM2</a></td>
+				<td align="left" width="14%"><a href="/status/EGYPIZZA,riu_20/">EGYPIZZA</a></td>
+				<td align="left" width="14%"><a href="/status/HG,riu_20/">HG</a></td>
+				<td align="left" width="14%"><a href="/status/NFACTOR,riu_20/">NFACTOR</a></td>
+				<td align="left" width="14%"><a href="/status/RMID,riu_20/">RMID</a></td>
+				<td align="left" width="14%"><a href="/status/TWOSQRS,riu_20/">TWOSQRS</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ALCATRAZ2,riu_20/">ALCATRAZ2</a></td>
+				<td align="left" width="14%"><a href="/status/CADYDIST,riu_20/">CADYDIST</a></td>
+				<td align="left" width="14%"><a href="/status/EIGHTS,riu_20/">EIGHTS</a></td>
+				<td align="left" width="14%"><a href="/status/HISTOGRA,riu_20/">HISTOGRA</a></td>
+				<td align="left" width="14%"><a href="/status/NGM,riu_20/">NGM</a></td>
+				<td align="left" width="14%"><a href="/status/ROCK,riu_20/">ROCK</a></td>
+				<td align="left" width="14%"><a href="/status/ULM09,riu_20/">ULM09</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ALIEN,riu_20/">ALIEN</a></td>
+				<td align="left" width="14%"><a href="/status/CAM5,riu_20/">CAM5</a></td>
+				<td align="left" width="14%"><a href="/status/ENCONDIN,riu_20/">ENCONDIN</a></td>
+				<td align="left" width="14%"><a href="/status/HLP_RAMS,riu_20/">HLP_RAMS</a></td>
+				<td align="left" width="14%"><a href="/status/NHAY,riu_20/">NHAY</a></td>
+				<td align="left" width="14%"><a href="/status/RPLA,riu_20/">RPLA</a></td>
+				<td align="left" width="14%"><a href="/status/UPDATEIT,riu_20/">UPDATEIT</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ALTSEQ,riu_20/">ALTSEQ</a></td>
+				<td align="left" width="14%"><a href="/status/CANDY,riu_20/">CANDY</a></td>
+				<td align="left" width="14%"><a href="/status/ENIGMATH,riu_20/">ENIGMATH</a></td>
+				<td align="left" width="14%"><a href="/status/HMBY,riu_20/">HMBY</a></td>
+				<td align="left" width="14%"><a href="/status/NINJA3,riu_20/">NINJA3</a></td>
+				<td align="left" width="14%"><a href="/status/RPLB,riu_20/">RPLB</a></td>
+				<td align="left" width="14%"><a href="/status/WACHOVIA,riu_20/">WACHOVIA</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AMR10G,riu_20/">AMR10G</a></td>
+				<td align="left" width="14%"><a href="/status/CANDY3,riu_20/">CANDY3</a></td>
+				<td align="left" width="14%"><a href="/status/ETF,riu_20/">ETF</a></td>
+				<td align="left" width="14%"><a href="/status/HORRIBLE,riu_20/">HORRIBLE</a></td>
+				<td align="left" width="14%"><a href="/status/NINJA4,riu_20/">NINJA4</a></td>
+				<td align="left" width="14%"><a href="/status/RPLC,riu_20/">RPLC</a></td>
+				<td align="left" width="14%"><a href="/status/WEBISL,riu_20/">WEBISL</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AMR11E,riu_20/">AMR11E</a></td>
+				<td align="left" width="14%"><a href="/status/CANTON,riu_20/">CANTON</a></td>
+				<td align="left" width="14%"><a href="/status/FACEFRND,riu_20/">FACEFRND</a></td>
+				<td align="left" width="14%"><a href="/status/HOTELS,riu_20/">HOTELS</a></td>
+				<td align="left" width="14%"><a href="/status/NINJA5,riu_20/">NINJA5</a></td>
+				<td align="left" width="14%"><a href="/status/RPLD,riu_20/">RPLD</a></td>
+				<td align="left" width="14%"><a href="/status/WILLITST,riu_20/">WILLITST</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AMR12D,riu_20/">AMR12D</a></td>
+				<td align="left" width="14%"><a href="/status/CDRSANJ,riu_20/">CDRSANJ</a></td>
+				<td align="left" width="14%"><a href="/status/FACT0,riu_20/">FACT0</a></td>
+				<td align="left" width="14%"><a href="/status/HPYNOS,riu_20/">HPYNOS</a></td>
+				<td align="left" width="14%"><a href="/status/NITK06,riu_20/">NITK06</a></td>
+				<td align="left" width="14%"><a href="/status/RPLE,riu_20/">RPLE</a></td>
+				<td align="left" width="14%"><a href="/status/WTK,riu_20/">WTK</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AMZRCK,riu_20/">AMZRCK</a></td>
+				<td align="left" width="14%"><a href="/status/CEQU,riu_20/">CEQU</a></td>
+				<td align="left" width="14%"><a href="/status/FARIDA,riu_20/">FARIDA</a></td>
+				<td align="left" width="14%"><a href="/status/HUBULLU,riu_20/">HUBULLU</a></td>
+				<td align="left" width="14%"><a href="/status/NOCHANGE,riu_20/">NOCHANGE</a></td>
+				<td align="left" width="14%"><a href="/status/SABBIRGAME,riu_20/">SABBIRGAME</a></td>
+				<td align="left" width="14%"><a href="/status/XMAX,riu_20/">XMAX</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ANARC05B,riu_20/">ANARC05B</a></td>
+				<td align="left" width="14%"><a href="/status/CHOCOLA,riu_20/">CHOCOLA</a></td>
+				<td align="left" width="14%"><a href="/status/FASHION,riu_20/">FASHION</a></td>
+				<td align="left" width="14%"><a href="/status/IAPCR2C,riu_20/">IAPCR2C</a></td>
+				<td align="left" width="14%"><a href="/status/NOTATRI,riu_20/">NOTATRI</a></td>
+				<td align="left" width="14%"><a href="/status/SAMER08F,riu_20/">SAMER08F</a></td>
+				<td align="left" width="14%"><a href="/status/YODANESS,riu_20/">YODANESS</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ANARC05H,riu_20/">ANARC05H</a></td>
+				<td align="left" width="14%"><a href="/status/CIRCLE_E,riu_20/">CIRCLE_E</a></td>
+				<td align="left" width="14%"><a href="/status/FAVDICE,riu_20/">FAVDICE</a></td>
+				<td align="left" width="14%"><a href="/status/ICANDIES,riu_20/">ICANDIES</a></td>
+				<td align="left" width="14%"><a href="/status/NSTEPS,riu_20/">NSTEPS</a></td>
+				<td align="left" width="14%"><a href="/status/SCAVHUNT,riu_20/">SCAVHUNT</a></td>
+				<td align="left" width="14%"><a href="/status/ZSUM,riu_20/">ZSUM</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ANARC08H,riu_20/">ANARC08H</a></td>
+				<td align="left" width="14%"><a href="/status/CODERE3,riu_20/">CODERE3</a></td>
+				<td align="left" width="14%"><a href="/status/FCTRL,riu_20/">FCTRL</a></td>
+				<td align="left" width="14%"><a href="/status/IITKWPCB,riu_20/">IITKWPCB</a></td>
+				<td align="left" width="14%"><a href="/status/NY10E,riu_20/">NY10E</a></td>
+				<td align="left" width="14%"><a href="/status/SEGSQRSS,riu_20/">SEGSQRSS</a></td>
+				<td align="left" width="14%"><a href="/status/,riu_20/"></a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ANARC09A,riu_20/">ANARC09A</a></td>
+				<td align="left" width="14%"><a href="/status/CODESPTA,riu_20/">CODESPTA</a></td>
+				<td align="left" width="14%"><a href="/status/FCTRL2,riu_20/">FCTRL2</a></td>
+				<td align="left" width="14%"><a href="/status/INVCNT,riu_20/">INVCNT</a></td>
+				<td align="left" width="14%"><a href="/status/OLOLO,riu_20/">OLOLO</a></td>
+				<td align="left" width="14%"><a href="/status/SHAHBG,riu_20/">SHAHBG</a></td>
+				<td align="left" width="14%"><a href="/status/,riu_20/"></a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ANARC09B,riu_20/">ANARC09B</a></td>
+				<td align="left" width="14%"><a href="/status/COINS,riu_20/">COINS</a></td>
+				<td align="left" width="14%"><a href="/status/FISHER,riu_20/">FISHER</a></td>
+				<td align="left" width="14%"><a href="/status/JNEXT,riu_20/">JNEXT</a></td>
+				<td align="left" width="14%"><a href="/status/ONP,riu_20/">ONP</a></td>
+				<td align="left" width="14%"><a href="/status/SHAKTI,riu_20/">SHAKTI</a></td>
+				<td align="left" width="14%"><a href="/status/,riu_20/"></a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AP2,riu_20/">AP2</a></td>
+				<td align="left" width="14%"><a href="/status/COMDIV,riu_20/">COMDIV</a></td>
+				<td align="left" width="14%"><a href="/status/FREQUENT,riu_20/">FREQUENT</a></td>
+				<td align="left" width="14%"><a href="/status/JULKA,riu_20/">JULKA</a></td>
+				<td align="left" width="14%"><a href="/status/OPCPIZZA,riu_20/">OPCPIZZA</a></td>
+				<td align="left" width="14%"><a href="/status/SINEGGS,riu_20/">SINEGGS</a></td>
+				<td align="left" width="14%"><a href="/status/,riu_20/"></a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/APS,riu_20/">APS</a></td>
+				<td align="left" width="14%"><a href="/status/CPRMT,riu_20/">CPRMT</a></td>
+				<td align="left" width="14%"><a href="/status/FUNPROB,riu_20/">FUNPROB</a></td>
+				<td align="left" width="14%"><a href="/status/KGSS,riu_20/">KGSS</a></td>
+				<td align="left" width="14%"><a href="/status/PALIN,riu_20/">PALIN</a></td>
+				<td align="left" width="14%"><a href="/status/SMILEY1807,riu_20/">SMILEY1807</a></td>
+				<td align="left" width="14%"><a href="/status/,riu_20/"></a></td>
+				</tr>
+								</table>
+				
+				
+								<h4><span title="List of problems to which solutions were submitted but none of them got AC.">TODO list of classical problems:</span></h4>
+				<table class="table">
+								<tr>
+				<td align="left" width="14%"><a href="/status/ACMT,riu_20/">ACMT</a></td>
+				<td align="left" width="14%"><a href="/status/ARRANGE,riu_20/">ARRANGE</a></td>
+				<td align="left" width="14%"><a href="/status/DCEPC504,riu_20/">DCEPC504</a></td>
+				<td align="left" width="14%"><a href="/status/HIGHWAYS,riu_20/">HIGHWAYS</a></td>
+				<td align="left" width="14%"><a href="/status/LPIS,riu_20/">LPIS</a></td>
+				<td align="left" width="14%"><a href="/status/NGM2,riu_20/">NGM2</a></td>
+				<td align="left" width="14%"><a href="/status/SVAREA11,riu_20/">SVAREA11</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ADAGAME2,riu_20/">ADAGAME2</a></td>
+				<td align="left" width="14%"><a href="/status/BEENUMS,riu_20/">BEENUMS</a></td>
+				<td align="left" width="14%"><a href="/status/DIVSUM2,riu_20/">DIVSUM2</a></td>
+				<td align="left" width="14%"><a href="/status/HOMO,riu_20/">HOMO</a></td>
+				<td align="left" width="14%"><a href="/status/MAX_NUM,riu_20/">MAX_NUM</a></td>
+				<td align="left" width="14%"><a href="/status/PATHEADS,riu_20/">PATHEADS</a></td>
+				<td align="left" width="14%"><a href="/status/TOANDFRO,riu_20/">TOANDFRO</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AJOB,riu_20/">AJOB</a></td>
+				<td align="left" width="14%"><a href="/status/BINSTIRL,riu_20/">BINSTIRL</a></td>
+				<td align="left" width="14%"><a href="/status/ESYRCRTN,riu_20/">ESYRCRTN</a></td>
+				<td align="left" width="14%"><a href="/status/IITKWPCA,riu_20/">IITKWPCA</a></td>
+				<td align="left" width="14%"><a href="/status/MINCOUNT,riu_20/">MINCOUNT</a></td>
+				<td align="left" width="14%"><a href="/status/PLNDROME,riu_20/">PLNDROME</a></td>
+				<td align="left" width="14%"><a href="/status/VFMUL,riu_20/">VFMUL</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/ALCATRAZ3,riu_20/">ALCATRAZ3</a></td>
+				<td align="left" width="14%"><a href="/status/BOOKS1,riu_20/">BOOKS1</a></td>
+				<td align="left" width="14%"><a href="/status/FACTCG2,riu_20/">FACTCG2</a></td>
+				<td align="left" width="14%"><a href="/status/KPRIMESB,riu_20/">KPRIMESB</a></td>
+				<td align="left" width="14%"><a href="/status/MKTHNUM,riu_20/">MKTHNUM</a></td>
+				<td align="left" width="14%"><a href="/status/RPLN,riu_20/">RPLN</a></td>
+				<td align="left" width="14%"><a href="/status/XXXXXXXX,riu_20/">XXXXXXXX</a></td>
+				</tr>
+								<tr>
+				<td align="left" width="14%"><a href="/status/AP3,riu_20/">AP3</a></td>
+				<td align="left" width="14%"><a href="/status/CNTDO,riu_20/">CNTDO</a></td>
+				<td align="left" width="14%"><a href="/status/FRACTION,riu_20/">FRACTION</a></td>
+				<td align="left" width="14%"><a href="/status/KSMALL,riu_20/">KSMALL</a></td>
+				<td align="left" width="14%"><a href="/status/NDIV,riu_20/">NDIV</a></td>
+				<td align="left" width="14%"><a href="/status/SORTOUT,riu_20/">SORTOUT</a></td>
+				<td align="left" width="14%"><a href="/status/,riu_20/"></a></td>
+				</tr>
+								</table>
+								
+							</div>
+		</div>
+	
+	
+	
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<table cellspacing="10" align="center">
+
+
+
+
+
+</table>
+
+
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//stx1.spoj.com/gfx/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<!-- Hotjar Tracking Code for http://www.spoj.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:334656,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	//window.open('http://incoming.hotjar.com/s/7366', '_blank');
+	</script>
+
+
+</body>
+</html>
